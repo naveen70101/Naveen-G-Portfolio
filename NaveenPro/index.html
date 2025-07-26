@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naveen-Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="nav-container">
+            <div class="nav-content">
+                <a href="#home" class="nav-logo">Portfolio</a>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-desktop">
+                    <a href="#home" class="nav-link active" data-page="home">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#about" class="nav-link" data-page="about">
+                        <i class="fas fa-user"></i>
+                        <span>About Me</span>
+                    </a>
+                    <a href="#projects" class="nav-link" data-page="projects">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Projects</span>
+                    </a>
+                    <a href="#contact" class="nav-link" data-page="contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="nav-mobile-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="nav-mobile">
+            <div class="nav-mobile-content">
+                <a href="#home" class="nav-link" data-page="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#about" class="nav-link" data-page="about">
+                    <i class="fas fa-user"></i>
+                    <span>About Me</span>
+                </a>
+                <a href="#projects" class="nav-link" data-page="projects">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Projects</span>
+                </a>
+                <a href="#contact" class="nav-link" data-page="contact">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="home-background">
+                <div class="bg-element bg-1"></div>
+                <div class="bg-element bg-2"></div>
+            </div>
+
+            <div class="home-content">
+                <div class="home-text">
+                    <h1 class="home-title">
+                        Hello, I'm <span class="gradient-text">Naveen</span>
+                    </h1>
+                    <p class="home-subtitle">
+                        A passionate developer crafting beautiful digital experiences with modern web technologies.
+                    </p>
+                    
+                    <div class="home-buttons">
+                        <button class="btn btn-primary" id="view-work-btn">View My Work</button>
+                        <button class="btn btn-secondary" id="get-in-touch-btn">Get in Touch</button>
+                    </div>
+                    
+                </div>
+                
+                <!-- Centered Profile Photo -->
+                <div class="profile-photo-center">
+                    <div class="profile-photo">
+                        <img src="naveen.jpg" alt="Profile">
+                    </div>
+                </div>
+                
+
+                <div class="home-3d">
+                    <div class="scene-container">
+                        <canvas id="scene3d"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- About Page -->
+        <section id="about" class="page">
+            <div class="page-container">
+                <div class="page-header">
+                    <h1 class="page-title">
+                        About <span class="gradient-text">Me</span>
+                    </h1>
+                    <p class="page-subtitle">
+                        I'm a passionate developer with a love for creating beautiful, functional, and user-friendly applications.
+                    </p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="about-subtitle">My Story</h2>
+                        <p class="about-description">
+                            Based on your background (you’re a BCA student with no prior technical experience but building projects, a portfolio, and preparing for internships), here’s a custom “About Me” section that sounds confident yet honest and suitable for your portfolio:
+                        </p>
+                        <p class="about-description">
+                          When I’m not coding, I’m usually exploring the latest in web development, improving my skills through side projects, or sketching design concepts that inspire my next build. I believe learning never stops—and I enjoy every step of the journey.
+                    </div>
+                    
+                    <div class="about-image">
+                        <div class="image-container">
+                            <img src="naveen.jpg" alt="About me">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fas fa-code skill-icon"></i>
+                        <h3 class="skill-title">Development</h3>
+                        <p class="skill-description">Full-stack web development with modern frameworks</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-palette skill-icon"></i>
+                        <h3 class="skill-title">Design</h3>
+                        <p class="skill-description">UI/UX design with attention to detail</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-bolt skill-icon"></i>
+                        <h3 class="skill-title">Performance</h3>
+                        <p class="skill-description">Optimized and fast web applications</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-heart skill-icon"></i>
+                        <h3 class="skill-title">Passion</h3>
+                        <p class="skill-description">Love for creating amazing user experiences</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Page -->
+        <section id="projects" class="page">
+            <div class="page-container">
+                <div class="page-header">
+                    <h1 class="page-title">
+                        My <span class="gradient-text">Projects</span>
+                    </h1>
+                    <p class="page-subtitle">
+                        Here are some of the projects I've worked on. Each one represents a unique challenge and learning experience.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800" alt="E-Commerce Platform">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">E-Commerce Platform</h3>
+                                <div class="project-date">
+                                    <i class="fas fa-calendar"></i>
+                                    2027
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Stripe</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link primary">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="#" class="project-link secondary">
+                                    <i class="fab fa-github"></i>
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Task Management App">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Task Management App</h3>
+                                <div class="project-date">
+                                    <i class="fas fa-calendar"></i>
+                                    2027
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">Framer Motion</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link primary">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="#" class="project-link secondary">
+                                    <i class="fab fa-github"></i>
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Weather Dashboard">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Weather Dashboard</h3>
+                                <div class="project-date">
+                                    <i class="fas fa-calendar"></i>
+                                    2027
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                A beautiful weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">OpenWeather API</span>
+                                <span class="tech-tag">Chart.js</span>
+                                <span class="tech-tag">Leaflet</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link primary">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="#" class="project-link secondary">
+                                    <i class="fab fa-github"></i>
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="page">
+            <div class="page-container">
+                <div class="page-header">
+                    <h1 class="page-title">
+                        Get In <span class="gradient-text">Touch</span>
+                    </h1>
+                    <p class="page-subtitle">
+                        Ready to start your next project? Let's create something amazing together.
+                    </p>
+                </div>
+
+                <div class="contact-content">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <div class="contact-form">
+                            <h2 class="form-title">Send me a message</h2>
+                            
+                            <form id="contactForm" class="contact-form-element">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <input type="text" id="subject" name="subject" class="form-input" placeholder="Project inquiry">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea id="message" name="message" rows="5" class="form-textarea" placeholder="Tell me about your project..." required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary form-submit">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <div class="info-section">
+                            <h2 class="info-title">Contact Information</h2>
+                            <div class="info-items">
+                                <a href="mailto:naveen8b11@gmail.com" class="info-item">
+                                    <div class="info-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="info-content">
+                                        <p class="info-label">Email</p>
+                                        <p class="info-value">naveeb8b11@gmail.com</p>
+                                    </div>
+                                </a>
+                                <a href="tel:7010140448" class="info-item">
+                                    <div class="info-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="info-content">
+                                        <p class="info-label">Phone</p>
+                                        <p class="info-value">+7010140448</p>
+                                    </div>
+                                </a>
+                                <a href="https://www.google.com/maps?q=12.919242,80.163415" class="info-item">
+                                    <div class="info-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="info-content">
+                                        <p class="info-label">Location</p>
+                                        <p class="info-value">Chennai, Tamil Nadu</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="social-section">
+                            <h3 class="social-title">Follow Me</h3>
+                            <div class="social-links">
+                                <a href="https://github.com/naveen70101" target="_blank" rel="noopener noreferrer" class="social-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/naveen-g-404ab535a/" target="_blank" rel="noopener noreferrer" class="social-link">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="work-together">
+                            <h3 class="work-title">Let's work together!</h3>
+                            <p class="work-description">
+                                I'm always interested in new opportunities and collaborations. 
+                                Whether you have a project in mind or just want to chat about technology, 
+                                feel free to reach out.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
